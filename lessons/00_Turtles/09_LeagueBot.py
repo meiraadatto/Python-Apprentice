@@ -14,9 +14,7 @@ import turtle as turtle
 screen = turtle.Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor('blue')
-
 t = turtle.Turtle()
-
 ... # Your Code Here
 def set_turtle_image(turtle, image_name):
     """Set the turtle's shape to a custom image."""
