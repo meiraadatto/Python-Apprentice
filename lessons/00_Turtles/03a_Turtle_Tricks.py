@@ -21,32 +21,42 @@ for i in range(5):
 tina.end_fill()
 tina.begin_fill()
 tina.color('red')
-def draw_polygon(sides):
+def draw_polygon(sides,size):
 
     angle = 360/sides # Calculate angle from number of sides
     
     for i in range(sides):                 # Loop through the number of sides
-        tina.forward(90)                              # Move tina forward by the forward distance
+        tina.forward(size)                              # Move tina forward by the forward distance
         tina.left(angle)                              # Turn tina left by the left turn
-draw_polygon(4)                        # Draw a square
+
+def draw_triangle(x,y,size):
+    tina.penup()
+    tina.goto(50,10)
+    tina.pendown()
+    draw_polygon(3,size)
+
+draw_triangle(50,120,200)                        # Draw a square
 
 tina.end_fill()
-
+tina.penup()
 tina.begin_fill()
-tina.color('green')
-tina.goto(0,100)    
+tina.goto(10,150)    
+tina.pendown()
 tina.end_fill()                                  # Move tina to another spot on the screen
 tina.begin_fill()
 tina.color('yellow')
-draw_polygon(5)                        # Draw a pentagon
+draw_polygon(4,110)                        # Draw a pentagon
 tina.end_fill()
 tina.begin_fill()
 tina.color('purple')
-tina.goto(-170,120)                                      # Move tina to another spot on the screen
+tina.penup()
+tina.goto(-245,125)  
+tina.pendown()                                    # Move tina to another spot on the screen
 tina.end_fill()
 tina.begin_fill()
 tina.color('pink')
-draw_polygon(6)                        # Draw a hexagon
+draw_polygon(6,100)                        # Draw a hexagon
 tina.end_fill()
-
+tina.color('black')
+tina.write("meira was here")
 turtle.exitonclick()                     # Close the window when we click on it
